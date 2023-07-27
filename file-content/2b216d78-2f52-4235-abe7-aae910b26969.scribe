@@ -1,0 +1,13 @@
+resource "file-content" "2b216d78-2f52-4235-abe7-aae910b26969" {
+  uuid = "2b216d78-2f52-4235-abe7-aae910b26969"
+  content = <<EOFSCRIBE
+#!/bin/bash
+yum update -y
+yum install httpd -y
+echo "<html><body><h1>This is my website!</h1></body></html>" > /var/www/html/index.html
+systemctl start httpd
+systemctl enable httpd
+EOFSCRIBE
+  dateCreated = "2022-01-12T15:49:27.000Z"
+  lastUpdated = "2022-01-12T15:49:27.000Z"
+}

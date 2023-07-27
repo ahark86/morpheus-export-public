@@ -1,0 +1,16 @@
+resource "task" "Basic Apache Bootstrap" {
+  name = "Basic Apache Bootstrap"
+  uuid = "eeb06fe5-ff39-4823-b248-17d5a8f2f018"
+  dateCreated = "2022-01-12T15:49:27.000Z"
+  executeTarget = "resource"
+  labels = [ "export" ]
+  lastUpdated = "2023-07-27T19:30:10.000Z"
+  options = [
+    {
+      content = { uuid = "2b216d78-2f52-4235-abe7-aae910b26969" }
+      optionType = { code = "script" }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
+  ]
+  taskType = { code = "script" }
+}
